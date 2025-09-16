@@ -1,0 +1,322 @@
+/* Thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #d5f5e3;
+    border-bottom: 4px solid #2ecc71;
+}
+
+/* Thông tin + tìm kiếm */
+.top-infor {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    height: 145px;
+}
+
+.infor-left {
+    background: #37c03e;
+    padding: 12px;
+    flex: 0 0 380px;
+    min-width: 300px;
+    max-width: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 145px;
+}
+
+.infor-left ul {
+    list-style: none;
+    font-size: 18px;
+    white-space: normal;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.infor-left li, .infor-left strong {
+    font-size: clamp(16px, 2.5vw, 21px);
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.4;
+}
+
+.search-form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 500px;
+    height: 145px;
+    padding: 20px;
+}
+
+.search-form input {
+    border: none;
+    padding: 6px 12px;
+    width: 200px;
+    max-width: 30%;
+    min-width: 120px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    outline: none;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.search-form button {
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    background: #f89b0e;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.search-form button:hover {
+    background: #e6890b;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #ccd826;
+    overflow: hidden;
+}
+
+/* Khung chứa chữ */
+.marquee {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 15s linear infinite;
+    width: 100%;
+}
+
+/* Đoạn chữ */
+.marquee h1 {
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #0e6251;
+    padding-left: 100%;
+    margin: 0;
+}
+
+/* Keyframe di chuyển từ trái sang phải */
+@keyframes marquee {
+    0% { transform: translateX(100%) translateY(-50%); }
+    100% { transform: translateX(-100%) translateY(-50%); }
+}
+
+.main-nav {
+    background-color: #fff;
+    overflow-x: auto;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    min-width: max-content;
+}
+
+.main-nav li a {
+    display: block;
+    padding: 8px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(16px, 2.2vw, 20px);
+    white-space: nowrap;
+}
+
+.main-nav li a:hover, .main-nav li a:focus {
+    background-color: #2ecc71;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Layout chính */
+main {
+    display: grid;
+    grid-template-columns: minmax(180px, 200px) 1fr;
+    flex: 1;
+    min-height: 0;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    background: #76d7c4;
+    border-right: 3px solid #2ecc71;
+    overflow-y: auto;
+    margin: 0;
+}
+
+.left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.left li a {
+    display: block;
+    padding: 12px 8px;
+    color: #17202a;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: clamp(14px, 2vw, 18px);
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+.left li a:hover, .left li a:focus {
+    background-color: #3ce97e;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.right {
+    overflow-y: auto;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+footer {
+    background-color: #282A35;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    margin: 0;
+    border: 0;
+    gap: 0;
+}
+
+footer p {
+    margin: 0 0;
+    font-size: clamp(14px, 1.8vw, 16px);
+}
+
+footer a {
+    color: #60e921;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(14px, 1.8vw, 16px);
+}
+
+footer a:hover, footer a:focus {
+    color: #ccd826;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .top-infor {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .infor-left {
+        flex: 1 1 100%;
+        height: 80px;
+        min-width: 100%;
+    }
+    
+    .search-form {
+        width: 100%;
+        min-width: 100%;
+        height: 100px;
+        padding: 15px;
+    }
+    
+    .search-form input {
+        width: 150px;
+        padding: 8px 10px;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    
+    .left {
+        border-right: none;
+        border-bottom: 3px solid #2ecc71;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+    
+    .left ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .left li {
+        flex: 0 0 auto;
+    }
+    
+    .left li a {
+        padding: 8px 12px;
+        border-bottom: none;
+        border-right: 1px solid #ddd;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-nav li a {
+        padding: 6px 12px;
+        font-size: 16px;
+    }
+    
+    .search-form {
+        justify-content: center;
+        height: 80px;
+    }
+    
+    .search-form input {
+        width: 120px;
+        margin-right: 8px;
+    }
+    
+    .marquee h1 {
+        font-size: 18px;
+    }
+}
