@@ -9,7 +9,7 @@
 <body>
     <!-- Header -->
     <header>
-        <!-- Thông tin + ô tìm kiếm #54db5f -->
+        <!-- Thông tin + ô tìm kiếm -->
         <div class="top-infor">
             <div class="infor-left">
                 <ul>
@@ -40,7 +40,7 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="#" title="Home">Trang chủ</a></li>
-                <li><a href="https://www.w3schools.com/html/default.asp">HTML</a></li>
+                <li><a href="https://codelearn.io/learning/html-css-cho-nguoi-moi-bat-dau" target="baitap">HTML</a></li>
                 <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
                 <li><a href="https://hocwebchuan.com/tutorial/php/" target="baitap">PHP</a></li>
                 <li><a href="https://www.w3schools.com/">W3Schools</a></li>
