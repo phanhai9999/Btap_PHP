@@ -1,0 +1,35 @@
+CREATE DATABASE qlthuvien;
+USE qlthuvien;
+
+CREATE TABLE tacgia (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tentacgia VARCHAR(100) NOT NULL,
+    namsinh INT
+);
+
+CREATE TABLE sach (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tensach VARCHAR(200) NOT NULL,
+    namxb INT NOT NULL,
+    tacgia_id INT,
+    FOREIGN KEY (tacgia_id) REFERENCES tacgia(id)
+);
+
+-- Thêm dữ liệu mẫu cho tác giả
+INSERT INTO tacgia (tentacgia, namsinh) VALUES
+('Nguyễn Nhật Ánh', 1955),
+('J.K. Rowling', 1965),
+('Haruki Murakami', 1949),
+('Tô Hoài', 1920),
+('Gabriel García Márquez', 1927);
+
+-- Thêm dữ liệu mẫu cho sách
+INSERT INTO sach (tensach, namxb, tacgia_id) VALUES
+('Mắt Biếc', 1990, 1),
+('Cho tôi xin một vé đi tuổi thơ', 2008, 1),
+('Harry Potter và Hòn đá Phù thủy', 1997, 2),
+('Harry Potter và Chiếc cốc lửa', 2000, 2),
+('Rừng Na Uy', 1987, 3),
+('Kafka bên bờ biển', 2002, 3),
+('Dế Mèn Phiêu Lưu Ký', 1941, 4),
+('Trăm Năm Cô Đơn', 1967, 5);

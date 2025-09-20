@@ -1,0 +1,9 @@
+CREATE DATABASE qlsinhvien;
+USE qlsinhvien;
+
+CREATE TABLE sinhvien (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    hoten VARCHAR(100) NOT NULL,
+    namsinh INT NOT NULL,
+    lop VARCHAR(50) NOT NULL
+);
