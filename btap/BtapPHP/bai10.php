@@ -166,7 +166,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <?php if ($result): ?>
             <div class="result">
-                <h3>📋 Thông tin cá nhân</h3>
+                <h3>Thông tin cá nhân</h3>
                 <?= $result ?>
             </div>
         <?php endif; ?>

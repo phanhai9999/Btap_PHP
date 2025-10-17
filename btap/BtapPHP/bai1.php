@@ -1,10 +1,8 @@
 <?php
-function isPrime($n): bool
+function checkSNT($n): bool
 {
     if ($n < 2) return false;
-    if ($n % 2 == 0) return $n == 2;
-    $r = (int)floor(sqrt($n));
-    for ($i = 3; $i <= $r; $i += 2) {
+    for ($i = 2; $i * $i <= $n; $i++) {
         if ($n % $i == 0) return false;
     }
     return true;
@@ -14,15 +12,15 @@ $from = isset($_POST['from']) ? (int)$_POST['from'] : 1;
 $to   = isset($_POST['to'])   ? (int)$_POST['to']   : 100;
 
 $sum = null;
-$primes = [];
+$listSNT = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($from > $to) {
         [$from, $to] = [$to, $from];
     }
     for ($i = $from; $i <= $to; $i++) {
-        if (isPrime($i)) {
+        if (checkSNT($i)) {
             $sum += $i;
-            $primes[] = $i;
+            $listSNT[] = $i;
         }
     }
 }
@@ -184,11 +182,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="card">
                 <div class="badge">Kết quả</div>
                 <h3 style="margin:10px 0 6px">Khoảng: <?= $from ?> → <?= $to ?></h3>
-                <p style="margin:6px 0">Có <strong><?= count($primes) ?></strong> số nguyên tố. Tổng = <strong><?= $sum ?></strong>.</p>
-                <?php if ($primes): ?>
+                <p style="margin:6px 0">Có <strong><?= count($listSNT) ?></strong> số nguyên tố. Tổng = <strong><?= $sum ?></strong>.</p>
+                <?php if ($listSNT): ?>
                     <div class="note">Danh sách số nguyên tố:</div>
                     <div class="primes">
-                        <?php foreach ($primes as $p): ?>
+                        <?php foreach ($listSNT as $p): ?>
                             <span class="tag"><?= $p ?></span>
                         <?php endforeach; ?>
                     </div>

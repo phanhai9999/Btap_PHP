@@ -7,7 +7,11 @@ $final = "";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $v = floatval($_POST["so"]);
     if ($v == 0) {
-        $final = "Số đã nhập: <strong>" . (isset($_SESSION["seq"]) && count($_SESSION["seq"]) ? implode(", ", $_SESSION["seq"]) : "—") . "</strong>";
+        $final = "Số đã nhập: <strong>" . 
+        (isset($_SESSION["seq"]) && count($_SESSION["seq"]) 
+        ? implode(", ", $_SESSION["seq"]) 
+        : "—") . "</strong>";
+
         session_unset();
         session_destroy(); // reset cho lần sau
     } else {

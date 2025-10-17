@@ -124,7 +124,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <div class="container">
-        <h2>➕ Thêm Sinh viên</h2>
+        <h2>Thêm Sinh viên</h2>
         <form method="POST">
             <label>Họ tên:</label>
             <input type="text" name="hoten" required>
@@ -138,7 +138,7 @@ if (isset($_POST['submit'])) {
             <input type="submit" name="submit" value="Thêm">
         </form>
 
-        <h2>📋 Danh sách</h2>
+        <h2>Danh sách</h2>
         <table>
             <tr>
                 <th>ID</th>

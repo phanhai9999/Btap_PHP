@@ -2,13 +2,13 @@
 $result = "";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $x = floatval($_POST["x"]);
-    $n = max(1, intval($_POST["n"]));
+    $n = (intval($_POST["n"]) < 1) ? 1 : intval($_POST["n"]);
 
     $sum = 0.0;
-    $fact = 1.0;
+    $giaithua = 1.0;
     for ($i = 1; $i <= $n; $i++) {
-        $fact *= $i;
-        $sum += pow($x, $i) / $fact;
+        $giaithua *= $i;
+        $sum += pow($x, $i) /$giaithua;
     }
     $result = "Kết quả S($x, $n) = $x + ($x^2)/2 + ... + ($x^$n)/$n = <strong style='color:#00796b'>" . round($sum, 6) . "</strong>";
 }

@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <!-- Thông tin + ô tìm kiếm -->
         <div class="top-infor">
             <div class="infor-left">
                 <ul>
@@ -28,18 +26,16 @@
 
         </div>
 
-    
-        <!-- Banner chào mừng-->
+
         <div class="banner">
             <div class="marquee">
                 <h1>Chào mừng bạn đến với website tìm hiểu về lập trình web!</h1>
             </div>
         </div>
 
-        <!-- Thanh điều hướng -->
         <nav class="main-nav">
             <ul>
-                <li><a href="#" title="Home">Trang chủ</a></li>
+                <li><a href="https://tuhocict.com/" title="Home" target="baitap">Trang chủ</a></li>
                 <li><a href="https://codelearn.io/learning/html-css-cho-nguoi-moi-bat-dau" target="baitap">HTML</a></li>
                 <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
                 <li><a href="https://hocwebchuan.com/tutorial/php/" target="baitap">PHP</a></li>
@@ -49,9 +45,7 @@
         </nav>
     </header>
     
-    <!-- Phần Main -->
     <main>
-        <!-- Menu bên trái -->
         <div>
             <aside class="left">
             <ul>
@@ -72,14 +66,12 @@
         </aside>
         </div>
 
-        <!-- Nội dung bên phải -->
         <article class="right">
-            <iframe name="baitap" src="https://hocwebchuan.com/" frameborder="0" width="100%" height="600px"></iframe>
+            <iframe name="baitap" src="https://hocwebchuan.com/" frameborder="0" width="100%" height="100%"></iframe>
         </article>
 
     </main>
 
-    <!-- Phần Footer -->
     <footer>
         <p>Liên hệ: <a href="../html/infor.html">Nguyễn Phan Hải</a></p>
         <p>&copy; 2025 Nguyễn Phan Hải. All rights reserved.</p>
