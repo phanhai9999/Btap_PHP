@@ -1,7 +1,7 @@
 <?php
 $result = "";
 
-function factorial($n, &$steps) {
+function giaiThua($n, &$steps) {
     $res = 1;
     $steps = [];
     for ($i = $n; $i >= 1; $i--) {
@@ -14,7 +14,7 @@ function factorial($n, &$steps) {
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $n = max(0, intval($_POST["n"]));
     $steps = [];
-    $value = factorial($n, $steps);
+    $value = giaiThua($n, $steps);
     $stepsStr = $n > 0 ? implode(" × ", $steps) . " = " : "";
     $result = "<strong>$n!</strong> = $stepsStr<strong style='color:#00796b'>$value</strong>";
 }

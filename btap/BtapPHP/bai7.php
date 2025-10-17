@@ -2,7 +2,7 @@
 $result = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $n = max(1, intval($_POST["n"]));
+    $n = (intval($_POST["n"]) > 0) ? intval($_POST["n"]) : 1;
     $divs = [];
 
     for ($i = 1; $i * $i <= $n; $i++) {

@@ -6,9 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $raw = trim($_POST['numbers'] ?? '');
     // tách theo dấu phẩy hoặc khoảng trắng
     $parts = preg_split('/[,\s]+/', $raw, -1, PREG_SPLIT_NO_EMPTY);
-    $nums = [];
+    
+    $nums = [];  // chap nhan so nguyen
     foreach ($parts as $p) {
-        // chấp nhận số nguyên hoặc số có dấu
         if (is_numeric($p)) {
             $nums[] = intval($p);
         }
@@ -19,19 +19,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         // lấy đúng 10 phần tử đầu
         $arr = array_slice($nums, 0, 10);
-        $positive = 0;
-        $negative = 0;
+        $soduong = 0;
+        $soam = 0;
         $zero = 0;
         foreach ($arr as $v) {
-            if ($v > 0) $positive++;
-            elseif ($v < 0) $negative++;
+            if ($v > 0) $soduong++;
+            elseif ($v < 0) $soam++;
             else $zero++;
         }
 
         $result = [
             'array' => $arr,
-            'positive' => $positive,
-            'negative' => $negative,
+            'positive' => $soduong,
+            'negative' => $soam,
             'zero' => $zero
         ];
     }

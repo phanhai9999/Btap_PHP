@@ -11,7 +11,7 @@ function isPerfect($n, &$divisors) {
         if ($n % $i == 0) {
             $sum += $i;
             $divisors[] = $i;
-            $pair = intdiv($n, $i);
+            $pair = intdiv($n, $i);   // so doi = n / i
             if ($pair != $i) {
                 $sum += $pair;
                 $divisors[] = $pair;
@@ -19,7 +19,7 @@ function isPerfect($n, &$divisors) {
         }
     }
     sort($divisors);
-    return $sum === $n;
+    return $sum === $n;  // ktra sum voi n
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
