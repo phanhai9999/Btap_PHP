@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'positive' => $soduong,
             'negative' => $soam,
             'zero' => $zero,
-            'tbc' => $tbc
         ];      
     }
 }

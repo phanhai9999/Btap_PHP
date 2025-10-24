@@ -3,19 +3,28 @@ session_start();
 
 $msg = "";
 $final = "";
+$sum = 0;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $v = floatval($_POST["so"]);
-    if ($v == 0) {
-        $final = "Số đã nhập: <strong>" . 
-        (isset($_SESSION["seq"]) && count($_SESSION["seq"]) 
-        ? implode(", ", $_SESSION["seq"]) 
-        : "—") . "</strong>";
 
+    // Nếu nhập 0 thì kết thúc
+    if ($v == 0) {
+        if (isset($_SESSION["seq"]) && count($_SESSION["seq"])) {
+            // Tính tổng tất cả các số đã nhập
+            $sum = array_sum($_SESSION["seq"]);
+            $final = "Tổng dãy: <strong>$sum</strong><br>Số đã nhập: <strong>" . implode(", ", $_SESSION["seq"]) . "</strong>";
+        } else {
+            $final = "Chưa có số nào được nhập.";
+        }
+
+        // Xóa session cho lần sau
         session_unset();
-        session_destroy(); // reset cho lần sau
+        session_destroy();
     } else {
+        // Thêm số mới vào mảng session
         $_SESSION["seq"][] = $v;
+
         $msg = "Đã ghi nhận: <strong>$v</strong> (nhập 0 để kết thúc)";
     }
 }
