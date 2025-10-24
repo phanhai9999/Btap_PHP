@@ -154,7 +154,7 @@
         <input type="text" name="new_username">
 
         <label>User Email *</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" required title="Vui long nhap email dung dinh dang">
 
         <div style="display: flex; gap: 10px;">
           <div style="flex: 1;">
@@ -168,7 +168,7 @@
 
           <div style="flex: 2;">
             <label>Full name <small>* BLOCK letters</small></label>
-            <input type="text" name="fullname" required pattern="[A-Z\s]+" title="Full name must be in BLOCK letters (A-Z)">
+            <input type="text" name="fullname" required placeholder="Vui long nhap ten cua ban">
           </div>
         </div>
 
@@ -176,7 +176,7 @@
         <p>Provide detail about your company</p>
 
         <label>Company name</label>
-        <input type="text" name="company">
+        <input type="text" name="company" required>
 
         <div class="checkbox-row">
           <label><input type="checkbox" required>I am agree with registration</label>
