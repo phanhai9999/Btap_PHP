@@ -137,7 +137,7 @@
         <input type="password" name="password">
 
         <div class="checkbox-row">
-          <label><input type="checkbox">Remember Me</label>
+          <label><input type="checkbox" required>Remember Me</label>
           <span class="toggle-link">Don't have account? <a onclick="toggleForms()">Sign up</a></span>
         </div>
 
@@ -154,7 +154,7 @@
         <input type="text" name="new_username">
 
         <label>User Email *</label>
-        <input type="email" name="email">
+        <input type="email" name="email" required>
 
         <div style="display: flex; gap: 10px;">
           <div style="flex: 1;">
@@ -168,7 +168,7 @@
 
           <div style="flex: 2;">
             <label>Full name <small>* BLOCK letters</small></label>
-            <input type="text" name="fullname">
+            <input type="text" name="fullname" required pattern="[A-Z\s]+" title="Full name must be in BLOCK letters (A-Z)">
           </div>
         </div>
 
@@ -179,7 +179,7 @@
         <input type="text" name="company">
 
         <div class="checkbox-row">
-          <label><input type="checkbox">I am agree with registration</label>
+          <label><input type="checkbox" required>I am agree with registration</label>
           <span class="toggle-link" style="margin-top: 10px;">
             Already have an account? <a onclick="toggleForms()">Login</a>
           </span>

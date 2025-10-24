@@ -13,6 +13,7 @@ if ($conn->connect_error) {
 }
 
 // --- Xử lý thêm sinh viên ---
+
 if (isset($_POST['submit'])) {
     $hoten = $_POST['hoten'];
     $namsinh = $_POST['namsinh'];

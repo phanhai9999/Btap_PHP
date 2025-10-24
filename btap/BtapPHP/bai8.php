@@ -32,8 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'array' => $arr,
             'positive' => $soduong,
             'negative' => $soam,
-            'zero' => $zero
-        ];
+            'zero' => $zero,
+            'tbc' => $tbc
+        ];      
     }
 }
 ?>
