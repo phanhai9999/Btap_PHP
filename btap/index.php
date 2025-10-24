@@ -11,11 +11,11 @@
         <div class="top-infor">
             <div class="infor-left">
                 <ul>
-                    <li><strong>Họ tên: </strong> Nguyễn Phan Hải</li>
-                    <li><strong>Khoa: </strong> Công nghệ thông tin</li>
-                    <li><strong>Lớp: </strong> CNTT3</li>
-                    <li><strong>Khóa: </strong> K63</li>
-                    <li><strong>Môn: </strong> Phát triển phần mềm mã nguồn mở</li>
+                    <li><strong>Họ tên: </strong> <span>Nguyễn Phan Hải</span></li>
+                    <li><strong>Khoa: </strong> <span>Công nghệ thông tin</span></li>
+                    <li><strong>Lớp: </strong> <span>CNTT</span></li>
+                    <li><strong>Khóa: </strong> <span>K63</span></li>
+                    <li><strong>Môn: </strong> <span>Phát triển phần mềm mã nguồn mở</span></li>
                 </ul>
             </div>
             
